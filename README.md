@@ -26,12 +26,16 @@ Python3とpipが入っていることを確認。
 cd /home/pi/gps_compass_project
 pip3 install -r requirements.txt
 RTKLIBの rtkrcv コマンドが使える状態にしてください（sudo apt install rtklib など）。
+
+
 2. 設定確認
 
 config/rtkrcv.conf の中の設定を確認してください。
 シリアルポート名、ボーレート、ログパスなど環境に合わせて調整可能。
 基線長（70cm）は baseline-length で設定。
 必要に応じて、gps_reader.py のデバイスパスやボーレートも調整してください。
+
+
 3. 起動方法
 
 3-1. 手動起動
@@ -39,6 +43,8 @@ config/rtkrcv.conf の中の設定を確認してください。
 
 python3 start_gps_compass.py
 Flaskサーバーはデフォルトでポート5000番で起動します。
+
+
 3-2. Webブラウザで結果確認
 Raspberry PiのIPアドレスにブラウザでアクセス：
 http://<ラズパイのIPアドレス>:5000/
