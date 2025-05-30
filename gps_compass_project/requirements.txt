@@ -1,4 +1,0 @@
-Flask
-folium
-pynmea2
-pyproj
