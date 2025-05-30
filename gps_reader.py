@@ -16,7 +16,7 @@ class GPSReader(threading.Thread):
         self.running = True
 
     def run(self):
-        with serial.Serial(self.device, 115200, timeout=1) as ser:
+        with serial.Serial(self.device, 4800, timeout=1) as ser:
             while self.running:
                 line = ser.readline().decode('ascii', errors='ignore').strip()
                 if line.startswith("$GPGGA") or line.startswith("$GNGGA"):
